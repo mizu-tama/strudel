@@ -1,0 +1,2 @@
+音楽わからんプログラマのstrudelによるlivecoding入門。
+課題はNotebookLMに出してもらっています。
