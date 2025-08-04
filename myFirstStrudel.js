@@ -11,9 +11,9 @@ const bass = n("0 4 2 -")
   .n("<32 16 8 4>")
   .scope()
 
-_$: drums
-_$: hats
-_$: bass
+// $: drums
+// $: hats
+// $: bass
 
 //練習課題 3: バリエーションの導入とシーケンスの応用
 const mainBeat = s("bd sd bd sd*2").bank("RolandTR909")
@@ -21,7 +21,13 @@ const fill = s("bd*8 sd").bank("RolandTR909")
 
 const variedDrums = every(4, () => fill, mainBeat)
 
-const complexHats = s("hh <[hh hh]*3 hh>").bank("RolandTR909").gain("0.2")
+// 練習課題 4: 様々なドラムキットと並列シーケンス
+const complexHats = s("hh <[hh hh]*3 hh>").gain("0.2")
+  // .bank("AkaiLinn")
+  .bank("RhythmAce")
+  // .bank("RolandTR909")
+
+$: sound("~ space:0 ~ space:4, casio casio:1")
 
 $: variedDrums
 $: complexHats
