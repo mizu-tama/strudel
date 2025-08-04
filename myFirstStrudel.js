@@ -27,7 +27,7 @@ const complexHats = s("hh <[hh hh]*3 hh>").gain("0.2")
   .bank("RhythmAce")
   // .bank("RolandTR909")
 
-$: sound("~ space:0 ~ space:4, casio casio:1")
+$: sound("~ space:0 ~ space:4, casio casio:1").gain("0.2")
 
 $: variedDrums
 $: complexHats
